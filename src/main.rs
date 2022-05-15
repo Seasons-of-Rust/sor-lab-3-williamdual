@@ -2,7 +2,6 @@ use core::time;
 use std::thread;
 
 fn main() {
-    
     let comic_book_shoppe = Shop {
         cards: [
             Card {
@@ -84,7 +83,7 @@ impl Shop {
     /// Get the total damage of all cards in the shop
     fn total_damage(&self) -> u32 {
         let mut damage: u32 = 0;
-        for card in self.cards.iter() { 
+        for card in self.cards.iter() {
             damage += card.damage;
         }
         damage
@@ -93,18 +92,18 @@ impl Shop {
     /// Get the total health of all cards in the shop
     fn total_health(&self) -> u32 {
         let mut health: u32 = 0;
-        for card in self.cards.iter() { 
+        for card in self.cards.iter() {
             health += card.health;
         }
         health
     }
-    
 }
 
 /// A Card is a card stores a price, health, and damage.
-struct Card { //prob overkill but idk what kinda numbers we wroking with here practically
+struct Card {
+    //prob overkill but idk what kinda numbers we wroking with here practically
     price: u32,
-    damage: u32, 
+    damage: u32,
     health: u32,
 }
 
